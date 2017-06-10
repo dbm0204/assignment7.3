@@ -82,6 +82,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             }
             else if(requestCode== NEW_PICTURE)
             {
+                Bitmap photoImage=(Bitmap) intent.getExtras().get("data");
+                mImage.setImageBitmap(photoImage);
                 Bitmap thumbnail = (Bitmap) intent.getExtras().get("data");
                 mImage.setImageBitmap(thumbnail);
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
